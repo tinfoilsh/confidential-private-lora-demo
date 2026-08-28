@@ -20,7 +20,7 @@ The infrastructure only ever holds ciphertext.
 At boot, the enclave:
 
 1. builds fresh hardware attestation evidence (Intel TDX + NVIDIA GPU),
-2. presents it to the model owner's keyserver (`vault-url` above, a
+2. presents it to the model owner's keyserver (`kbs-url` above, a
    [tinfoilsh/keyserver](https://github.com/tinfoilsh/keyserver) instance),
 3. receives `LORA_MODEL_KEY` only if the evidence matches the release
    measurements the owner pinned for this exact repo and tag, and
@@ -72,6 +72,6 @@ included.
    infrastructure.
 2. Run a [keyserver](https://github.com/tinfoilsh/keyserver) holding the key,
    with a policy pinning this repo, release tag, and deployment domain.
-3. Point `models:` and `vault-url:` in `tinfoil-config.yml` at your artifact
+3. Point `models:` and `kbs-url:` in `tinfoil-config.yml` at your artifact
    and keyserver, push a tag, run the release workflow, and deploy from the
    [dashboard](https://dash.tinfoil.sh) or the `tinfoil` CLI.
