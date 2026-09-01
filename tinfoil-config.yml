@@ -5,7 +5,7 @@ gpus: 1
 
 # Customer-run keyserver that releases the adapter decryption key to the
 # attested enclave at boot. Measured into the enclave attestation.
-vault-url: https://keys.tanyaverma.sh:9443
+keyserver-url: https://keys.tanyaverma.sh:9443
 
 networks:
   nvidia:
